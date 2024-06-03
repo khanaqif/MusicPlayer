@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beats</title>
+    <link
+      class="fevicon"
+      rel="icon"
+      type="image/x-icon"
+      href="images/Fevicon.ico"
+      sizes="50x50" />
+
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha384-cEuV5vZjHbC2NQ8rsqO7NbFotPaUJ8li5W60ZqL5kFfQhjoJR55P8R2rsVrmW2pZ"
+      crossorigin="anonymous" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+
+  <body>
+    <!--  ********** Nav Bar *********** -->
+
+    <nav>
+      <ul>
+        <li>
+          <div class="logo"><img src="images/music_logo.png" /></div>
+        </li>
+
+        <!--  <li><i class="NavIcon fa-solid fa-magnifying-glass"  ></i>search</li>-->
+
+        <div class="search">
+          <input type="text" class="searchbox" placeholder="Search..." />
+          <button class="searchButton">
+            <i class="NavIcon fa-solid fa-magnifying-glass"></i>
+          </button>
+          <!--    <button class="closeButton">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button> -->
+        </div>
+
+        <li><i class="NavIcon fa-solid fa-heart"></i>favourites</li>
+        <li><i class="NavIcon fa-solid fa-download"></i> Downloads</li>
+
+        <li><i class="NavIcon fa-solid fa-user"></i> Profile</li>
+      </ul>
+    </nav>
+
+    <!-- Container : SongList and backgroundImage -->
+
+    <div class="container">
+      <div class="songlist">
+        <h1>Best of NCS - No Copyright Sounds</h1>
+
+        <!-- ------------   -->
+        <div class="songcontainer">
+          <!-- *****************************  -->
+
+          <div class="songitem">
+            <img src="images/song1.png" alt="1" />
+            <span class="songTitle">Late At Night</span>
+            <span class="songlistplay">
+              <span class="timestamp">2:34</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="0"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song2.png" alt="2" />
+            <span class="songTitle">The Rocks</span>
+            <span class="songlistplay">
+              <span class="timestamp">2:28</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="1"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song3.png" alt="3" />
+            <span class="songTitle">Keep You</span>
+            <span class="songlistplay">
+              <span class="timestamp">3:31</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="2"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song4.png" alt="4" />
+            <span class="songTitle">Set You Free (VERCU Remix)</span>
+            <span class="songlistplay">
+              <span class="timestamp">2:53</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="3"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song5.png" alt="5" />
+            <span class="songTitle">Calling Out Your Name</span>
+            <span class="songlistplay">
+              <span class="timestamp">3:54</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="4"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song6.png" alt="6" />
+            <span class="songTitle">SUN</span>
+            <span class="songlistplay">
+              <span class="timestamp">4:01</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="5"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song7.png" alt="7" />
+            <span class="songTitle">Never Let You Down</span>
+            <span class="songlistplay">
+              <span class="timestamp">2:42</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="6"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song8.png" alt="8" />
+            <span class="songTitle">Pull Me In</span>
+            <span class="songlistplay">
+              <span class="timestamp">3:49</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="7"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="images/song9.png" alt="9" />
+            <span class="songTitle">who am I?</span>
+            <span class="songlistplay">
+              <span class="timestamp">3:00</span>
+              <i class="songItemPlay fa-regular fa-circle-play" id="8"></i>
+            </span>
+          </div>
+          <!-- *****************************  -->
+        </div>
+      </div>
+
+      <div class="songbanner"></div>
+    </div>
+
+    <!-- controller : pause/play , forward , back-->
+    <div class="controller">
+      <input
+        type="range"
+        name="range"
+        id="songProgressBar"
+        min="0"
+        value="0"
+        max="100" />
+
+      <div class="icons">
+        <i class="fa-solid fa-backward-step" id="previous"></i>
+        <i class="fa-regular fa-circle-play" id="playButton"></i>
+        <i class="fa-solid fa-forward-step" id="next"></i>
+      </div>
+
+      <div class="songinfo">
+        <!-- song playing gif -->
+        <img src="images/playing.gif" alt="gif" id="playingGif" /><span
+          id="songTitle"
+          >Late At Night</span
+        >
+      </div>
+
+      <div id="timestampDisplay"></div>
+    </div>
+
+    <script src="index.js" charset="UTF-8"></script>
+    <script
+      src="https://kit.fontawesome.com/7b6cc3a8a8.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

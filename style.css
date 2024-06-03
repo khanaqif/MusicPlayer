@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(247, 223, 247);
+
+  /* background: linear-gradient(to right, rgb(235, 209, 235), rgb(155, 89, 182));*/
+}
+
+.link .fevicon {
+  display: inline-block;
+  padding: 0%;
+  width: 50px; /* Set your desired width */
+  height: 50px; /* Set your desired height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow effect */
+}
+nav {
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  height: 65px;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.searchButton {
+  color: white;
+  background-color: black;
+  border: none;
+  height: 50px;
+  width: 50px;
+  font-size: 17px;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.25s ease;
+}
+
+.searchbox {
+  height: 23px;
+  width: 20px;
+  border-radius: 25px;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  transition: width 0.25s ease;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.active .searchbox {
+  width: 250px;
+}
+
+.active .searchButton {
+  transform: translate(240px);
+  color: black;
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  font-size: larger;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.container {
+  min-height: 72vh;
+  width: 70%;
+
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 30px auto;
+
+  padding: 34px;
+  border-radius: 12px;
+  background-image: url("images/bg.jpg");
+  background-size: cover; /* Adjusted property to cover the entire container */
+  background-position: center;
+}
+
+.controller {
+  position: sticky;
+  height: 130px;
+  color: white;
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; /* add this line to make sure the background image covers the entire container */
+  background-position: center; /* add this line to center the background image */
+}
+
+.controller input[type="range"] {
+  accent-color: rgb(252, 201, 252);
+}
+.icons {
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+#songProgressBar {
+  width: 80vw;
+  cursor: pointer;
+}
+
+.songcontainer {
+  margin-top: 50px;
+}
+
+.NavIcon {
+  margin-right: 7px;
+}
+
+.songitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: white;
+  margin: 7px;
+  padding: 7px;
+  width: 70%;
+  height: 25px;
+  border-radius: 55px;
+}
+
+.songitem img {
+  height: 30px;
+  border-radius: 50px;
+  margin-left: 7px;
+}
+
+.timestamp {
+  margin: 0 2px;
+}
+
+#timestampDisplay {
+  position: absolute;
+  display: flex;
+  margin-left: 70%;
+  margin-top: 24px;
+  font-family: "Varela Round", sans-serif;
+}
+.songitem i {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.songinfo {
+  position: absolute;
+  left: 10vw;
+  font-family: "Varela Round", sans-serif;
+}
+
+.songinfo img {
+  height: 40px;
+  width: 60px;
+  margin-right: 50px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
